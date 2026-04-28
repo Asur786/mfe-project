@@ -1,0 +1,17 @@
+{
+  "name": "specs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently -n DASH,PROF,SERV,SETT,PRIV,HOST -c blue,green,yellow,magenta,cyan,white \"npm start --prefix dashboard\" \"npm start --prefix profile\" \"npm start --prefix services\" \"npm start --prefix settings\" \"npm start --prefix privacy-policy\" \"wait-on http://localhost:3001 http://localhost:3002 http://localhost:3003 http://localhost:3004 http://localhost:3005 && npm start --prefix host\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "wait-on": "^7.2.0"
+  }
+}
